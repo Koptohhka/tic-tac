@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 320px;
+    margin: 0 auto;
+}
+
+.tic-tac-wrapper__list {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px;
+}
+
+.tic-tac-wrapper__list-item {
+    width: 100px;
+    height: 100px;
+    border: 3px gray solid;
+    list-style: none;
+    position: relative;
+
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+/*Разметка для крестика и нолика*/
+.tic::after,
+.tic::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 45px;
+}
+
+.tic::after {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.tic::before {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+.tac::after {
+    content: '';
+    display: block;
+    width: 85px;
+    height: 85px;
+    border: 5px solid black;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 5;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+/*Разметка для крестика и нолика*/
+
+.popup {
+    display: none;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
